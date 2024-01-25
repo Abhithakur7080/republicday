@@ -1,6 +1,6 @@
 var audioElement = document.getElementById("audioElement");
-audioElement.autoplay = true;
-var promise = audioElement.play();
-if (promise !== undefined) {
-  promise.then((_) => {}).catch((error) => {});
-}
+var playButton = document.getElementById("play");
+
+playButton.addEventListener("click", function () {
+  audioElement.play()
+});
